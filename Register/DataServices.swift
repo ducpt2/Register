@@ -37,25 +37,38 @@ class DataServices {
                 _cities.append(city)
             }
         }
+        NotificationCenter.default.post(name: NotificationKey.didUpdateCities, object: nil)
     }
     
-}
+    private var _districts: [District] = []
+    
+    var districts: [District] {
+        set {
+            _districts = newValue
+        }
+        get {
+            if _districts.count == 0 {
+                updateDistricts()
+            }
+            return _districts
+        }
+    }
+    
+    func updateDistricts() {
+        _districts.removeAll()
+        let fileName = "Districts.plist"
+        guard let root = PlistServices().getDictionaryFrom(plist: fileName) else {
+            return
+        }
+        guard let cityDictionaries = root["Districts"] as? [Dictionary<AnyHashable, Any>]else {return}
+        
+        for dict in cityDictionaries {
+            if let district = District(dict: dict) {
+                _districts.append(district)
+            }
+        }
+        NotificationCenter.default.post(name: NotificationKey.didUpdateDistricts, object: nil)
+    }
 
-struct City {
-    var name = ""
-    var code = 0
-    
-    init?(name: String, code: Int) {
-        guard code > 0 else { return nil }
-        guard name != "" else { return nil }
-        self.name = name
-        self.code = code
-    }
-    
-    init?(dict: Dictionary<AnyHashable, Any>) {
-        guard let name = dict["Name"] as? String else {return nil}
-        guard let code = dict["CityCode"] as? Int else {return nil}
-        self.init(name: name, code: code)
-    }
     
 }
