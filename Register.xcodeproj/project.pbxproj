@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FF0F15A61E7522B10072B28C /* Districts.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF0F15A51E7522B10072B28C /* Districts.plist */; };
+		FF3F35081E768BE9003B923D /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F35071E768BE9003B923D /* SelectAgeViewController.swift */; };
+		FF3F350C1E768C62003B923D /* SelectGenderTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F350B1E768C62003B923D /* SelectGenderTableVC.swift */; };
 		FF9F34E31E74F131008A3442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F34E21E74F131008A3442 /* AppDelegate.swift */; };
 		FF9F34E81E74F131008A3442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9F34E61E74F131008A3442 /* Main.storyboard */; };
 		FF9F34EA1E74F131008A3442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9F34E91E74F131008A3442 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		FF0F15A51E7522B10072B28C /* Districts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Districts.plist; sourceTree = "<group>"; };
+		FF3F35071E768BE9003B923D /* SelectAgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
+		FF3F350B1E768C62003B923D /* SelectGenderTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGenderTableVC.swift; sourceTree = "<group>"; };
 		FF9F34DF1E74F131008A3442 /* Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Register.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F34E21E74F131008A3442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF9F34E71E74F131008A3442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				FFD8742A1E7610570022C82F /* BaseViewController */,
 				FFD874241E760FFE0022C82F /* SelectCityTableVC.swift */,
 				FFD874261E7610300022C82F /* SelectDistrictTableVC.swift */,
+				FF3F35071E768BE9003B923D /* SelectAgeViewController.swift */,
+				FF3F350B1E768C62003B923D /* SelectGenderTableVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,12 +214,14 @@
 			files = (
 				FFD874291E76104F0022C82F /* BaseTableVC.swift in Sources */,
 				FFD1D48C1E7564130032375E /* DataServices.swift in Sources */,
+				FF3F35081E768BE9003B923D /* SelectAgeViewController.swift in Sources */,
 				FFD874201E760F900022C82F /* City.swift in Sources */,
 				FFD874251E760FFE0022C82F /* SelectCityTableVC.swift in Sources */,
 				FFD1D4901E75A0810032375E /* PlistServices.swift in Sources */,
 				FFD874271E7610300022C82F /* SelectDistrictTableVC.swift in Sources */,
 				FFD8742E1E7614C70022C82F /* Constants.swift in Sources */,
 				FFD8742C1E7610D40022C82F /* District.swift in Sources */,
+				FF3F350C1E768C62003B923D /* SelectGenderTableVC.swift in Sources */,
 				FF9F34E31E74F131008A3442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
